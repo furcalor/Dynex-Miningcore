@@ -164,6 +164,19 @@ public partial class ConcealCoinTemplate
     #endregion
 }
 
+
+public partial class DynexCoinTemplate
+{
+    #region Overrides of CoinTemplate
+
+    public override string GetAlgorithmName()
+    {
+                return "DynexSolve";
+    }
+
+    #endregion
+}
+
 public partial class CryptonoteCoinTemplate
 {
     #region Overrides of CoinTemplate

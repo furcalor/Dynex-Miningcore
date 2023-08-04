@@ -1,0 +1,134 @@
+﻿{
+    "logging": {
+        "level": "info",
+        "enableConsoleLog": true,
+        "enableConsoleColors": true,
+        "logFile": "",
+        "apiLogFile": "",
+        "logBaseDirectory": "",
+        "perPoolLogFile": false
+    },
+    "banning": {
+        "manager": "integrated",
+        "banOnJunkReceive": false,
+        "banOnInvalidShares": false
+    },
+    "notifications": {
+        "enabled": false,
+        "email": {
+            "host": "smtp.example.com",
+            "port": 587,
+            "user": "user",
+            "password": "password",
+            "fromAddress": "info@yourpool.org",
+            "fromName": "pool support"
+        },
+        "admin": {
+            "enabled": false,
+            "emailAddress": "user@example.com",
+            "notifyBlockFound": true
+        }
+    },
+    "persistence": {
+        "postgres": {
+            "host": "127.0.0.1",
+            "port": 5432,
+            "user": "miningcore",
+            "password": "password",
+            "database": "miningcore"
+        }
+    },
+    "paymentProcessing": {
+        "enabled": true,
+        "interval": 100,
+        "shareRecoveryFile": "recovered-shares.txt"
+    },
+    "api": {
+        "enabled": true,
+        "listenAddress": "*",
+        "port": 4000,
+        "metricsIpWhitelist": [],
+        "rateLimiting": {
+            "disabled": true,
+            "rules": [
+                {
+                    "Endpoint": "*",
+                    "Period": "1s",
+                    "Limit": 5
+                }
+            ],
+            "ipWhitelist": [
+                ""
+            ]
+        }
+    },
+    "clusterName": "eu1",
+    "pools": [
+        {
+                "id": "dynex-pool",
+                "enabled": true,
+                "coin": "dynex",
+                "randomXRealm": "dnx",
+                "address": "XwoViygnRn7QaFtbc8XkwigF5oXhRZ41uinUK8XviwvAe4XjHJqfUVHGcieAJQSyWcQ1d6tzfGvyz5KZKSNeU3Bh1d9FDxNoJ",
+                "rewardRecipients": [
+                {
+                        "address": "XwoViygnRn7QaFtbc8XkwigF5oXhRZ41uinUK8XviwvAe4XjHJqfUVHGcieAJQSyWcQ1d6tzfGvyz5KZKSNeU3Bh1d9FDxNoJ",
+                        "percentage": 1
+                }
+                ],
+                "blockRefreshInterval": 100,
+                "clientConnectionTimeout": 600,
+                "banning": {
+                        "enabled": true,
+                        "time": 600,
+                        "invalidPercent": 50,
+                        "checkThreshold": 50
+                },
+                "ports": {
+                        "3430": {
+                                "listenAddress": "0.0.0.0",
+                                "difficulty": 10000,
+                                "name": "GPU Mining",
+                                "varDiff": {
+                                        "minDiff": 10000,
+                                        "maxDiff": null,
+                                        "targetTime": 15,
+                                        "retargetTime": 90,
+                                        "variancePercent": 30
+                                }
+                        }
+                },
+                "NetworkTypeOverride": "mainnet",
+                "daemons": [
+                {
+                        "host": "127.0.0.1",
+                        "port": 18333,
+                        "user": "",
+                        "password": ""
+                },
+                {
+                        "host": "127.0.0.1",
+                        "port": 8070,
+                        "user": "",
+                        "password": "",
+                        "category": "wallet"
+                },
+                {
+                        "host": "poolservice.dynexcoin.org",
+                        "port": 8080,
+                        "user": "",
+                        "password": "",
+                        "category": "poolservice"
+                }
+                ],
+                "UUID": "POOL-UUID",
+                "paymentProcessing": {
+                        "enabled": true,
+                        "minimumPayment": 1.0,
+                        "minimumPaymentToPaymentId": 1.0,
+                        "payoutScheme": "PPLNS", // PROP PPLNS SOLO supported
+                       "payoutSchemeConfig": { "factor": 2.0 }
+                }
+        }
+    ]
+}

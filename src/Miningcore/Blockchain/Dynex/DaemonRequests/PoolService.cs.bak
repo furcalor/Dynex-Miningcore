@@ -1,0 +1,39 @@
+using Newtonsoft.Json;
+
+namespace Miningcore.Blockchain.Dynex.DaemonRequests;
+
+public class PoolService
+{
+    /// <summary>
+    /// Address of wallet to receive coinbase transactions if block is successfully mined.
+    /// </summary>
+    [JsonProperty("mallob")]
+    public string Mallob { get; set; }
+
+    [JsonProperty("login")]
+    public string Login { get; set; }
+
+    [JsonProperty("convertedblob")]
+    public string ConvertedBlob { get; set; }
+
+    [JsonProperty("result")]
+    public string Result { get; set; }
+
+    [JsonProperty("hashDiff")]
+    public string HashDiff { get; set; }
+
+    [JsonProperty("difficulty")]
+    public string Difficulty { get; set; }
+
+    [JsonProperty("height")]
+    public string Height { get; set; }
+
+    [JsonProperty("hashrate")]
+    public string Hashrate { get; set; }
+
+    [JsonProperty("pool_uuid")]
+    public string Pool_uuid { get; set; }
+
+    [JsonProperty("pouw_data")]
+    public string Pouw_Data { get; set; }
+}

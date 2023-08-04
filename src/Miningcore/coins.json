@@ -1,4 +1,22 @@
 {
+        "dynex": {
+                "name": "Dynex",
+                "canonicalName": "Dynex",
+                "symbol": "DNX",
+                "family": "dynex",
+                "hash": "DynexSolve",
+                "hashVariant": 0,
+                "difficultyTarget": 120,
+                "smallestUnit": 1000000000,
+                "AddressPrefix": 185,
+                "PubAddressPrefix": 185,
+                "addressPrefixIntegrated": 145,
+                "AddressPrefixTestnet": 145,
+                "MinimumConfirmations": 60,
+                "Confirmations": 60,
+                "explorerBlockLink": "https://explorer.dynexcoin.org/show_block?block=$height$",
+                "explorerTxLink": "https://explorer.dynexcoin.org/show_transaction?tx={0}"
+        },
     "5gcash": {
         "name": "5G Cash",
         "symbol": "VGC",
