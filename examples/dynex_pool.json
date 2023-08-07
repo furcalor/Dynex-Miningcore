@@ -116,8 +116,6 @@
                 {
                         "host": "poolservice.dynexcoin.org",
                         "port": 8080,
-                        "user": "",
-                        "password": "",
                         "category": "poolservice"
                 }
                 ],
