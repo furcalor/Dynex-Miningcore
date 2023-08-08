@@ -41,8 +41,8 @@
     "paymentProcessing": {
         "enabled": true,
         "interval": 100,
-        "shareRecoveryFile": "recovered-shares.txt"
     },
+    "shareRecoveryFile": "recovered-shares.txt",
     "api": {
         "enabled": true,
         "listenAddress": "*",
