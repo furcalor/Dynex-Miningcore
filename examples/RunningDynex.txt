@@ -1,0 +1,5 @@
+Step 1: Begin by initiating and synchronizing the daemon using the command ./dynexd. Should you prefer to utilize an alternative port other than 18333, this can be achieved by employing the flag --rpc-bind-port=19333.
+
+Step 2: Next, generate a wallet with the command ./walletd -g -w walletname.bin.
+
+Step 3: Finally, activate the wallet daemon by executing ./walletd -w walletname.bin.
