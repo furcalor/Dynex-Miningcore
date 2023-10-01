@@ -71,7 +71,7 @@
         <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
         <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
         <PackageReference Include="NBitcoin" Version="7.0.24" />
-        <PackageReference Include="NBitcoin.Altcoins" Version="3.0.18" />
+        <PackageReference Include="NBitcoin.Altcoins" Version="3.0.20" />
         <PackageReference Include="NBitcoin.Zcash" Version="3.0.0" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
         <PackageReference Include="NLog" Version="5.1.1" />
